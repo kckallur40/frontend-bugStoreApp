@@ -49,7 +49,7 @@ body{
 .topic{
     font-size: 40px;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 25px;
 }
 
 .option{
@@ -73,7 +73,6 @@ body{
 #reg-form{
     display: flex;
     flex-direction: column;
-
 }
 
 button{
@@ -87,4 +86,21 @@ button:hover{
     transition: all 0.4s;
     color: #fff;
     background-color: black;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form input{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.login-form button{
+    width: 30%;
 }
