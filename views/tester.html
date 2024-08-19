@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tester Dashboard</title>
+    <link rel="stylesheet" href="../styles2.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Tester Dashboard</h1>
+        
+        <!-- User Information Section -->
+        <div class="user-info">
+            <p><strong>Username:</strong> <span id="username">tester123</span></p>
+            <p><strong>Email:</strong> <span id="email">tester@example.com</span></p>
+        </div>
+
+        <!-- Project Information Section -->
+        <div id="project-info" class="project-info">
+            <!-- Dynamic Content will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        // Example JavaScript to dynamically update project info
+        const projects = [
+            {
+                name: "Project Alpha",
+                bugs: ["Bug #1: Login issue", "Bug #2: UI glitch", "Bug #3: Performance issue"]
+            },
+            {
+                name: "Project Beta",
+                bugs: ["Bug #1: Data not saving", "Bug #2: Incorrect calculations"]
+            },
+            {
+                name: "Project Gamma",
+                bugs: ["Bug #1: Page not loading", "Bug #2: Missing icons", "Bug #3: UI alignment issue"]
+            },
+            {
+                name: "Project Delta",
+                bugs: ["Bug #1: API failure", "Bug #2: Slow response time", "Bug #3: Data corruption"]
+            },
+            {
+                name: "Project Epsilon",
+                bugs: ["Bug #1: Security vulnerability", "Bug #2: Memory leak", "Bug #3: Crashing on startup"]
+            }
+        ];
+
+        const projectInfoDiv = document.getElementById('project-info');
+
+        if (projects.length === 0) {
+            projectInfoDiv.innerHTML = "<p>You are not assigned to any projects.</p>";
+        } else {
+            projects.forEach(project => {
+                const projectDiv = document.createElement('div');
+                projectDiv.className = 'project';
+
+                const projectTitle = document.createElement('h2');
+                projectTitle.textContent = project.name;
+
+                const bugList = document.createElement('ul');
+                project.bugs.forEach(bug => {
+                    const bugItem = document.createElement('li');
+                    bugItem.textContent = bug;
+                    bugList.appendChild(bugItem);
+                });
+
+                const reportBugLink = document.createElement('a');
+                reportBugLink.href = "report_bug.html";
+                reportBugLink.textContent = "Report a New Bug";
+                reportBugLink.className = "report-bug-link";
+
+                projectDiv.appendChild(projectTitle);
+                projectDiv.appendChild(bugList);
+                projectDiv.appendChild(reportBugLink);
+                projectInfoDiv.appendChild(projectDiv);
+            });
+        }
+    </script>
+</body>
+
+</html>
