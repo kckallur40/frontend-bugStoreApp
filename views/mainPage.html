@@ -9,19 +9,34 @@
 </head>
 
 <body>
-    <div class="container admin-page">
+    <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
 
-        <div class="info">
-            <h1>Welcome, Karthik C Kallur</h1>
-            <div class="info-details">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- <h2>Menu</h2> -->
+        <ul>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="./teams.html">Teams</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container admin-page">
+        <div class="profile-section">
+            <img src="../resources/download.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="profile-details">
+                <h1>Karthik C Kallur</h1>
                 <p><strong>Role:</strong> Project Manager</p>
                 <p><strong>Email:</strong> <a href="mailto:kckallur40@gmail.com">kckallur40@gmail.com</a></p>
-                <p><strong>Last Login:</strong> <span>13:56:22 IST</span></p>
             </div>
+            <p><strong>Last Login:</strong> <span>13:56:22 IST</span></p>
         </div>
 
         <div class="project-managed">
-            <h2>Projects Managed by you</h2>
+            <h2>Projects Managed by You</h2>
             <table class="project-table">
                 <thead>
                     <tr>
@@ -46,7 +61,6 @@
         </div>
 
         <button class="add-project-btn" onclick="addProject()">Add Project</button>
-
     </div>
 
     <script src="../scripts.js"></script>

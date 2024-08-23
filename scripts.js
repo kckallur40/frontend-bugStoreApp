@@ -50,3 +50,25 @@ function validateRegistration(){
 function addProject(){
     window.open("addProject.html");
 }
+
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const container = document.querySelector('.container.admin-page');
+    if (sidebar.style.left === '-300px') {
+        sidebar.style.left = '0'; // Show the sidebar
+        container.classList.add('expanded'); // Expand main container
+        
+    } else {
+        sidebar.style.left = '-300px'; // Hide the sidebar
+        container.classList.remove('expanded'); // Contract main container
+    }
+}
+
+// function addProject() {
+//     const projectTable = document.querySelector('.project-table tbody');
+//     const newRow = document.createElement('tr');
+//     const newCell = document.createElement('td');
+//     newCell.innerHTML = `<a href="#" target="_blank">New Project Added</a>`;
+//     newRow.appendChild(newCell);
+//     projectTable.appendChild(newRow);
+// }
