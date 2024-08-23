@@ -9,7 +9,10 @@
 </head>
 
 <body>
-    <h1 class="topic">Bug Tracking Application</h1>
+    <div class="heading-topic">
+        <img src="https://img.icons8.com/?size=100&id=37fQEyOEKo18&format=png&color=000000" alt="logo">
+        <h1 class="topic">Bug Tracking Application</h1>
+    </div>
     <div class="container">
 
         <div class="heading">
@@ -17,12 +20,22 @@
         </div>
         <div class="content">
             <form id="reg-form">
-                Name: <input type="text" id="name-inp">
-                Department: <input type="text" id="dept-inp">
-                Email: <input type="email" id="email-inp">
-                Username: <input type="text" id="uname-inp">
-                Password: <input type="password" id="reg-pwd-inp">
-                Confirm Password: <input type="text" id="reg-conf-pwd-inp">
+
+                <div class="row">
+                    Name: <input type="text" id="name-inp">
+                    Department: <input type="text" id="dept-inp">
+                </div>
+                
+                <div class="row">
+                    Email: <input type="email" id="email-inp">
+                    Username: <input type="text" id="uname-inp">
+                </div>
+                
+                <div class="row">
+                    Password: <input type="password" id="reg-pwd-inp">
+                    Confirm Password: <input type="text" id="reg-conf-pwd-inp">
+                </div>
+                
                 <label for="role">Role:</label>
                 <select id="role">
                     <option selected value="PM">Project Manager</option>

@@ -410,3 +410,15 @@ body, html {
         padding: 10px;
     }
 }
+
+.in-progress{
+    background-color: #66e985;
+}
+
+.pending {
+    background-color: #ff0000;
+}
+
+.completed {
+    background-color: #04ff00;
+}

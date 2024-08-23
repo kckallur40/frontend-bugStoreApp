@@ -15,10 +15,22 @@ body {
 .topic {
     font-size: 32px;
     color: #333333;
-    margin-top: 40px;
+    margin-top: 80px;
     margin-bottom: 80px;
     text-align: center;
     width: 100%;
+}
+
+.heading-topic{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.heading-topic img{
+    height: 60px;
+    width: 60px;
 }
 
 /* Container styling */
@@ -116,7 +128,7 @@ ul#team-members li {
     text-decoration: underline;
 }
 footer{
-    margin-top: 150px;
+    margin-top: 110px;
     border-radius: 15px;
     text-align: center; 
     padding: 0px 20px; 

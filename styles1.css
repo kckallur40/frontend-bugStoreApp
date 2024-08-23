@@ -43,7 +43,7 @@ form#reg-form {
     flex-direction: column;
     gap: 15px;
     text-align: left;
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -82,4 +82,24 @@ button[type="submit"]:hover {
         width: 95%;
         padding: 20px;
     }
+}
+
+.heading-topic{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.heading-topic img{
+    height: 60px;
+    width: 60px;
+}
+
+.row {
+    margin-block: 20px  ;
+    display: flex;
+    gap: 50px;
+    justify-content:space-between;
+    align-items: center;
 }
