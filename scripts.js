@@ -72,3 +72,59 @@ function toggleSidebar() {
 //     newRow.appendChild(newCell);
 //     projectTable.appendChild(newRow);
 // }
+// Sidebar toggle functionality
+document.getElementById('sidebarToggle').addEventListener('click', function () {
+    document.querySelector('.sidebar').classList.toggle('active');
+});
+
+// Pie Chart
+const pieChartCtx = document.getElementById('pieChart').getContext('2d');
+const pieChart = new Chart(pieChartCtx, {
+    type: 'pie',
+    data: {
+        labels: ['Resolved Bugs', 'Pending Bugs'],
+        datasets: [{
+            data: [150, 90],
+            backgroundColor: ['#28a745', '#dc3545']
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            }
+        }
+    }
+});
+
+// Bar Chart
+const barChartCtx = document.getElementById('barChart').getContext('2d');
+const barChart = new Chart(barChartCtx, {
+    type: 'bar',
+    data: {
+        labels: ['Project Alpha', 'Project Beta', 'Project Gamma'],
+        datasets: [{
+            label: 'Bugs',
+            data: [45, 60, 30],
+            backgroundColor: '#007bff'
+        }, {
+            label: 'Resolved',
+            data: [30, 40, 20],
+            backgroundColor: '#28a745'
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+// Sidebar toggle functionality
+document.getElementById('sidebarToggle').addEventListener('click', function () {
+    document.querySelector('.sidebar').classList.toggle('active');
+});
